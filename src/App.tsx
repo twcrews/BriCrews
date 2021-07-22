@@ -1,20 +1,48 @@
+import React from 'react';
+import * as Material from '@material-ui/core';
+import * as Icon from '@material-ui/icons';
+
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <Material.Container 
+      disableGutters
+      maxWidth="md"
+    >
+      <Material.Grid
+        container
+        alignItems="flex-start"
+        spacing={2}
+      >
+        <Material.Grid
+          item
+          xs={12}
+          sm={3}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          <Material.Paper 
+            style={{ borderRadius: "20px" }}
+            elevation={0}
+          >
+            <Material.Typography>
+              Test sidebar
+            </Material.Typography>
+          </Material.Paper>
+        </Material.Grid>
+        <Material.Grid
+          item
+          xs={12}
+          sm={9}
+        >
+          <Material.Paper 
+            style={{ borderRadius: "20px" }}
+            elevation={0}
+          >
+            <Material.Typography>
+              Test content
+            </Material.Typography>
+          </Material.Paper>
+        </Material.Grid>
+      </Material.Grid>
+    </Material.Container>
   );
 }
 
