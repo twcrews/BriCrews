@@ -1,0 +1,9 @@
+{
+    "Content": {
+        "Owner": "Lorem Ipsum",
+        "Header": "Dolor Sit Emet"
+    },
+    "Images": {
+        "Portrait": "res/portrait.png"
+    }
+}
