@@ -1,9 +1,14 @@
 {
     "Content": {
         "Owner": "Lorem Ipsum",
+        "Title": "Lorem Ipsum",
         "Header": "Dolor Sit Emet"
     },
     "Images": {
         "Portrait": "res/portrait.png"
+    },
+    "Links": {
+        "Facebook": "https://www.facebook.com/brianne.kirchgessner",
+        "LinkedIn": "https://www.linkedin.com/in/briannekirchgessner/"
     }
 }
