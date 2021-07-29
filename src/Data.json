@@ -1,11 +1,68 @@
 {
     "Content": {
-        "Owner": "Lorem Ipsum",
-        "Title": "Lorem Ipsum",
-        "Header": "Dolor Sit Emet"
+        "Owner": "Brianne Crews",
+        "Title": "2022 Pharm. D./MBA Candidate",
+        "Header": "Pharmacy Professional",
+        "Tagline": "I have spent the past several years honing my skills for a career of true service.\nFrom patient counseling to point of care testing, I specialize in providing top-quality care.",
+        "MembershipHeader": "Leadership",
+        "Memberships": [
+            "NCPA National Student Leadership Council Secretary",
+            "NCPA Local Chapter President",
+            "Fellowship of Christian Pharmacists Legislative Committee",
+            "Oklahoma Society of Health-System Pharmacists Co-founding Chair and Secretary",
+            "American Pharmacists Association Secretary",
+            "Dean's Council of Students Representative",
+            "Pharmacy Leadership Society President",
+            "Phi Lambda Sigma President"
+        ],
+        "AwardHeader": "Honors",
+        "Awards": [
+            {
+                "Icon": "account_balance",
+                "Label": "Selection to Pharmacy Leadership Society"
+            },
+            {
+                "Icon": "school",
+                "Label": "2021 NCPA Foundation Presidential Scholarship"
+            },
+            {
+                "Icon": "school",
+                "Label": "2021 Cardinal Health Scholarship"
+            },
+            {
+                "Icon": "school",
+                "Label": "2020 NCPA Foundation Partners in Pharmacy Scholarship"
+            },
+            {
+                "Icon": "star",
+                "Label": "SWOSU College of Pharmacy Leader of the Month"
+            },
+            {
+                "Icon": "favorite",
+                "Label": "Local Patient Counseling Competition Winner"
+            },
+            {
+                "Icon": "checkBox",
+                "Label": "Selection for NCPA Advanced Pharmacy Practice Experience"
+            },
+            {
+                "Icon": "star",
+                "Label": "Phi Lambda Sigma Outstanding Member of the Semester"
+            }
+        ]
     },
     "Images": {
-        "Portrait": "res/portrait.png"
+        "Portrait": {
+            "Source": "res/portrait.png",
+            "Alt": "Brianne's Professional portrait"
+        },
+        "Background": {
+            "Source": "res/bg-tile.png"
+        },
+        "MembershipLogo": {
+            "Source": "res/base-logo.png",
+            "Alt": "SWOSU College of Pharmacy Logo"
+        }
     },
     "Links": {
         "Facebook": "https://www.facebook.com/brianne.kirchgessner",
