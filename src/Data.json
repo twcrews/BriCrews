@@ -18,10 +18,6 @@
         "AwardHeader": "Honors",
         "Awards": [
             {
-                "Icon": "account_balance",
-                "Label": "Selection to Pharmacy Leadership Society"
-            },
-            {
                 "Icon": "school",
                 "Label": "2021 NCPA Foundation Presidential Scholarship"
             },
@@ -34,22 +30,43 @@
                 "Label": "2020 NCPA Foundation Partners in Pharmacy Scholarship"
             },
             {
+                "Icon": "school",
+                "Label": "2020 Walter L. Dickinson Memorial Scholarship"
+            },
+            {
+                "Icon": "school",
+                "Label": "2019 Dr. ElGenia French Memorial Scholarship"
+            },
+            {
                 "Icon": "star",
                 "Label": "SWOSU College of Pharmacy Leader of the Month"
             },
             {
-                "Icon": "favorite",
+                "Icon": "star",
+                "Label": "Phi Lambda Sigma Outstanding Member of the Semester"
+            },
+            {
+                "Icon": "emoji_events",
                 "Label": "Local Patient Counseling Competition Winner"
             },
             {
-                "Icon": "checkBox",
-                "Label": "Selection for NCPA Advanced Pharmacy Practice Experience"
+                "Icon": "check_box",
+                "Label": "Selection to the Pharmacy Leadership and Ownership Society"
             },
             {
-                "Icon": "star",
-                "Label": "Phi Lambda Sigma Outstanding Member of the Semester"
+                "Icon": "check_box",
+                "Label": "Selection for NCPA Advanced Pharmacy Practice Experience"
             }
-        ]
+        ],
+        "CertificationHeader": "Certifications",
+        "Certifications": [
+            "American Heart Association Basic Life Support for Providers",
+            "Narcan Administration Certification",
+            "Certified Blood Pressure Screener",
+            "Oklahoma Pharmacy Intern License No. I-10067"
+        ],
+        "ExperienceHeader": "Career Experience",
+        "ExperienceTagline": "I've been blessed with the opportunity to serve in a diverse set of work and volunteer experiences."
     },
     "Images": {
         "Portrait": {
