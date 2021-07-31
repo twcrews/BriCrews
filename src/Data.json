@@ -168,7 +168,11 @@
                     }
                 ]
             }
-        ]
+        ],
+        "Footer": {
+            "Text": "Created with ❤ by Brianne's husband",
+            "Button": "View Source"
+        }
     },
     "Images": {
         "Portrait": {
@@ -185,6 +189,7 @@
     },
     "Links": {
         "Facebook": "https://www.facebook.com/brianne.kirchgessner",
-        "LinkedIn": "https://www.linkedin.com/in/briannekirchgessner/"
+        "LinkedIn": "https://www.linkedin.com/in/briannekirchgessner/",
+        "PageSource": "https://github.com/twcrews/BriCrews"
     }
 }

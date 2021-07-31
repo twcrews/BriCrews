@@ -4,7 +4,7 @@ import Data from './Data.json';
 
 function App() {
   return (
-    <div
+    <Material.Box
     style={{ 
       backgroundImage: `url(${Data.Images.Background.Source})`,
       minHeight: "100vh"
@@ -153,7 +153,7 @@ function App() {
                     alt={Data.Images.MembershipLogo.Alt}
                     style={{ 
                       width: "100%",
-                      maxWidth: "300px" 
+                      maxWidth: "200px" 
                     }}
                   />
                 </Material.Grid>
@@ -209,13 +209,19 @@ function App() {
               <Material.Typography paragraph>
                 {Data.Content.ExperienceTagline}
               </Material.Typography>
+              <Material.Box>
               {Data.Content.Experiences.map(experience =>
                 <Material.Accordion key={experience.Title}>
                   <Material.AccordionSummary
                     expandIcon={<Icon.ExpandMore />}
                     id={experience.Title.slice(0, 5) + "-accordion"}
                   >
-                    <Material.Typography>{experience.Title}</Material.Typography>
+                    <Material.Typography 
+                      variant="h5"
+                      style={{ fontSize: "18px" }}
+                    >
+                      {experience.Title}
+                    </Material.Typography>
                   </Material.AccordionSummary>
                   <Material.AccordionDetails>
                     <Material.Grid container>
@@ -223,6 +229,7 @@ function App() {
                         <Material.Grid 
                           key={item.Header}
                           item
+                          xs={12}
                           zeroMinWidth
                         >
                           <Material.Typography variant="h6">
@@ -240,11 +247,33 @@ function App() {
                   </Material.AccordionDetails>
                 </Material.Accordion>
               )}
+              </Material.Box>
+              <Material.Divider 
+                variant="middle"
+                style={{ margin: "20px 0" }}
+              />
+              <footer style={{ textAlign: "center" }}>
+                <Material.Typography 
+                  paragraph
+                  variant="caption"
+                  style={{ color: "#666" }}
+                >
+                  {Data.Content.Footer.Text}
+                </Material.Typography>
+                <Material.Button
+                  variant="contained"
+                  disableElevation
+                  size="small"
+                  href={Data.Links.PageSource}
+                >
+                  {Data.Content.Footer.Button}
+                </Material.Button>
+              </footer>
             </Material.Paper>
           </Material.Grid>
         </Material.Grid>
       </Material.Container>
-    </div>
+    </Material.Box>
   );
 }
 
