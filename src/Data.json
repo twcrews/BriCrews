@@ -60,13 +60,115 @@
         ],
         "CertificationHeader": "Certifications",
         "Certifications": [
+            "Community Pharmacy-Based Point-of Care Testing Certification",
+            "Mental Health First Aid Certification",
+            "APhA Pharmacy-Based Immunization Delivery Certification",
             "American Heart Association Basic Life Support for Providers",
             "Narcan Administration Certification",
             "Certified Blood Pressure Screener",
             "Oklahoma Pharmacy Intern License No. I-10067"
         ],
         "ExperienceHeader": "Career Experience",
-        "ExperienceTagline": "I've been blessed with the opportunity to serve in a diverse set of work and volunteer experiences."
+        "ExperienceTagline": "I've been blessed with the opportunity to serve in a diverse set of work and volunteer experiences.",
+        "Experiences": [
+            {
+                "Title": "Education",
+                "Content": [
+                    {
+                        "Header": "Doctor of Pharmacy",
+                        "Detail": "Southwestern Oklahoma State University College of Pharmacy; Weatherford, OK (May 2022)"
+                    },
+                    {
+                        "Header": "Master of Business Administration",
+                        "Detail": "Southwestern Oklahoma State University School of Business and Technology; Weatherford, OK (May 2022)"
+                    },
+                    {
+                        "Header": "Bachelor of Arts",
+                        "Detail": "Pre-pharmacy Curriculum, Southwestern Oklahoma State University College of Pharmacy; Weatherford, OK (May 2018)"
+                    }
+                ]
+            },
+            {
+                "Title": "Experiential Rotations",
+                "Content": [
+                    {
+                        "Header": "Integris Grove Hospital",
+                        "Detail": "Institutional rotation at a small hospital in northeastern Oklahoma. Filled requests from doctors and nurses, met with healthcare professionals, and applied patient care process to real-life scenarios."
+                    },
+                    {
+                        "Header": "Osborn Drugs",
+                        "Detail": "Community-based rotation at a large-scale independent community pharmacy in northeastern Oklahoma. Participated in team meetings as well as conversations between doctors, insurance companies, and other healthcare professionals."
+                    }
+                ]
+            },
+            {
+                "Title": "Clinical Presentations",
+                "Content": [
+                    {
+                        "Header": "Journal Club Presentation: Olanzapine in Chemotherapy",
+                        "Detail": "Presented to Student Pharmacists and Pharmacy Professors, SWOSU College of Pharmacy. Citation: Navari RM, Qin R, Ruddy KJ, et al. Olanzapine for the Prevention of Chemotherapy-Induced Nausea and Vomiting. The New England journal of medicine. 2016;375(2):134-142. doi:10.1056/NEJMoa1515725."
+                    },
+                    {
+                        "Header": "Journal Club Presentation: Tuberculosis Vaccine",
+                        "Detail": "Presented to Student Pharmacists and Pharmacy Professors, SWOSU College of Pharmacy. Citation: Meeren OVD, Hatherill M, Nduba V, et al. Phase 2b Controlled trial of M72/AS01E Vaccine to Prevent Tuberculosis. N Eng J Med. 2018;379(17):1621-1634. Doi:10.1056/NEJMoa1803484."
+                    },
+                    {
+                        "Header": "Pharmacy & Therapeutics Committee Presentation: Entresto",
+                        "Detail": "Presented to Student Pharmacists and Pharmacy Professors, SWOSU College of Pharmacy."
+                    }
+                ]
+            },
+            {
+                "Title": "Community Service",
+                "Content": [
+                    {
+                        "Header": "COVID-19 Vaccinations",
+                        "Detail": "Clinic Volunteer, Weatherford, OK"
+                    },
+                    {
+                        "Header": "TB Testing",
+                        "Detail": "Clinic Volunteer, Weatherford, OK"
+                    },
+                    {
+                        "Header": "Immunization Certification",
+                        "Detail": "Teaching Volunteer, Weatherford, OK"
+                    },
+                    {
+                        "Header": "SWOSU Pre-pharmacy",
+                        "Detail": "Student Panel Volunteer, Weatherford, OK"
+                    },
+                    {
+                        "Header": "PharmCorp",
+                        "Detail": "Volunteer, Weatherford, OK"
+                    },
+                    {
+                        "Header": "Influenza Vaccinations",
+                        "Detail": "SWOSU and AGAPE volunteer, Weatherford, OK"
+                    }
+                ]
+            },
+            {
+                "Title": "Professional Development",
+                "Content": [
+                    {
+                        "Header": "COVID-19 Presentation",
+                        "Detail": "Weatherford Rotary, Weatherford, OK"
+                    },
+                    {
+                        "Header": "Admissions Interviewer",
+                        "Detail": "SWOSU College of Pharmacy, Weatherford, OK"
+                    },
+                    {
+                        "Header": "Tulsa Tech Workshop",
+                        "Detail": "SWOSU College of Pharmacy, Weatherford, OK"
+                    },
+                    {
+                        "Header": "Narcan Training Presentations",
+                        "Detail": "Weatherford, OK"
+                    }
+                ]
+            }
+        ]
     },
     "Images": {
         "Portrait": {

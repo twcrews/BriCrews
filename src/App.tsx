@@ -1,4 +1,3 @@
-import React from 'react';
 import * as Material from '@material-ui/core';
 import * as Icon from '@material-ui/icons';
 import Data from './Data.json';
@@ -187,7 +186,10 @@ function App() {
               </Material.Typography>
               <ul>
                 {Data.Content.Certifications.map(Certificate => 
-                  <Material.Typography paragraph>
+                  <Material.Typography 
+                    paragraph
+                    key={Certificate.slice(0, 10)}
+                  >
                     <li>{Certificate}</li>
                   </Material.Typography>
                 )}
@@ -204,9 +206,40 @@ function App() {
               >
                 {Data.Content.ExperienceHeader}
               </Material.Typography>
-              <Material.Typography>
+              <Material.Typography paragraph>
                 {Data.Content.ExperienceTagline}
               </Material.Typography>
+              {Data.Content.Experiences.map(experience =>
+                <Material.Accordion key={experience.Title}>
+                  <Material.AccordionSummary
+                    expandIcon={<Icon.ExpandMore />}
+                    id={experience.Title.slice(0, 5) + "-accordion"}
+                  >
+                    <Material.Typography>{experience.Title}</Material.Typography>
+                  </Material.AccordionSummary>
+                  <Material.AccordionDetails>
+                    <Material.Grid container>
+                      {experience.Content.map(item =>
+                        <Material.Grid 
+                          key={item.Header}
+                          item
+                          zeroMinWidth
+                        >
+                          <Material.Typography variant="h6">
+                            {item.Header}
+                          </Material.Typography>
+                          <Material.Typography 
+                            paragraph
+                            style={{ wordWrap: "break-word" }}
+                          >
+                            {item.Detail}
+                          </Material.Typography>
+                        </Material.Grid>
+                      )}
+                    </Material.Grid>
+                  </Material.AccordionDetails>
+                </Material.Accordion>
+              )}
             </Material.Paper>
           </Material.Grid>
         </Material.Grid>
