@@ -1,8 +1,11 @@
 import * as Material from '@material-ui/core';
 import * as Icon from '@material-ui/icons';
+import { useMediaQuery } from '@material-ui/core';
 import Data from './Data.json';
 
 function App() {
+  const desktop = useMediaQuery("(min-width: 960px)")
+
   return (
     <Material.Box
     style={{ 
@@ -30,7 +33,7 @@ function App() {
                 borderRadius: "20px",
                 padding: "30px",
                 textAlign: "center",
-                position: "sticky"
+                position: desktop ? "fixed" : "relative"
               }}
               elevation={0}
             >
