@@ -4,7 +4,7 @@ import { useMediaQuery } from '@material-ui/core';
 import Data from './Data.json';
 
 function App() {
-  const desktop = useMediaQuery("(min-width: 960px)")
+  const desktop = useMediaQuery("(min-width: 960px)");
 
   return (
     <Material.Box
