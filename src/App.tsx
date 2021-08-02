@@ -6,6 +6,12 @@ import Data from './Data.json';
 function App() {
   const desktop = useMediaQuery("(min-width: 960px)");
 
+  const headerStyle: React.CSSProperties = { 
+    fontFamily: "Merriweather", 
+    fontWeight: "bold",
+    wordWrap: "break-word"
+  };
+
   return (
     <Material.Box
     style={{ 
@@ -41,7 +47,8 @@ function App() {
                 style={{
                   width: "100%",
                   maxWidth: "300px",
-                  borderRadius: "10px"
+                  borderRadius: "10px",
+                  marginBottom: "20px"
                 }}
                 src={Data.Images.Portrait.Source}
                 alt={Data.Images.Portrait.Alt}
@@ -49,7 +56,12 @@ function App() {
               <Material.Typography
                 variant="h3"
                 variantMapping={{ h3: "h1" }}
-                style={{ fontWeight: "bold" }}
+                style={{
+                  fontFamily: "Merriweather", 
+                  fontSize: "42px",
+                  fontWeight: "bold",
+                  wordWrap: "break-word"
+                }}
                 paragraph
               >
                 {Data.Content.Owner}
@@ -113,7 +125,7 @@ function App() {
               <Material.Typography
                 variant="h4"
                 variantMapping={{ h4: "h2" }}
-                style={{ fontWeight: "bold" }}
+                style={headerStyle}
                 paragraph
               >
                 {Data.Content.Header}
@@ -125,7 +137,10 @@ function App() {
                 >
                   {line}
                 </Material.Typography>)}
-              <Material.Typography variant="h5">
+              <Material.Typography
+                variant="h5"
+                style={headerStyle}
+              >
                 {Data.Content.MembershipHeader}
               </Material.Typography>
               <Material.Grid container>
@@ -156,14 +171,15 @@ function App() {
                     alt={Data.Images.MembershipLogo.Alt}
                     style={{ 
                       width: "100%",
-                      maxWidth: "200px" 
+                      maxWidth: "200px",
+                      marginBottom: "20px"
                     }}
                   />
                 </Material.Grid>
               </Material.Grid>
               <Material.Typography
                 variant="h5"
-                style={{ paddingTop: "20px" }}
+                style={headerStyle}
               >
                 {Data.Content.AwardHeader}
               </Material.Typography>
@@ -183,7 +199,7 @@ function App() {
               </Material.List>
               <Material.Typography
                 variant="h5"
-                style={{ paddingTop: "20px" }}
+                style={headerStyle}
               >
                 {Data.Content.CertificationHeader}
               </Material.Typography>
@@ -205,7 +221,7 @@ function App() {
                 paragraph
                 variant="h4"
                 variantMapping={{ h4: "h2" }}
-                style={{ fontWeight: "bold" }}
+                style={headerStyle}
               >
                 {Data.Content.ExperienceHeader}
               </Material.Typography>
@@ -235,7 +251,10 @@ function App() {
                           xs={12}
                           zeroMinWidth
                         >
-                          <Material.Typography variant="h6">
+                          <Material.Typography 
+                            variant="h6"
+                            style={headerStyle}
+                          >
                             {item.Header}
                           </Material.Typography>
                           <Material.Typography 
