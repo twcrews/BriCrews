@@ -13,11 +13,7 @@ function App() {
 	};
 
 	return (
-		<Material.Box
-		style={{ 
-			backgroundImage: `url(${Data.Images.Background.Source})`
-		}}
-		>
+		<Material.Box>
 			
 		</Material.Box>
 	);
