@@ -1,22 +1,39 @@
 import * as Icon from "@material-ui/icons";
-import { Button, Card, Grid, Typography, useMediaQuery } from "@material-ui/core";
-import data from "./Data.json";
-import * as Types from "./Types";
+import {
+	Button,
+	Card,
+	createTheme,
+	Grid,
+	Typography,
+	useMediaQuery,
+} from "@material-ui/core";
 import { Box } from "@mui/system";
+import { makeStyles } from "@mui/styles";
 
 function App() {
 	const desktop = useMediaQuery("(min-width: 960px)");
 	const mobile = useMediaQuery("(max-width: 600px)");
 	const tablet = useMediaQuery("(min-width: 601px) and (max-width: 959px)");
 
+	const theme = createTheme({
+		typography: {
+			h1: {
+				fontSize: "3rem",
+				fontWeight: "bold",
+			},
+			fontFamily: "Roboto",
+			fontSize: 14,
+			fontWeightLight: 300,
+			fontWeightRegular: 400,
+			fontWeightMedium: 500,
+		},
+	});
+
 	const headerStyle: React.CSSProperties = {
 		fontFamily: "Merriweather",
 		fontWeight: "bold",
 		wordWrap: "break-word",
 	};
-
-	const getSectionById = (id: string): Types.Section | undefined =>
-		data.body.sections.find((section) => section.id === id);
 
 	return (
 		<Box>
@@ -25,19 +42,12 @@ function App() {
 					<Grid item xs style={{ textAlign: "center" }}>
 						<>
 							<Typography variant="h1" style={headerStyle}>
-								{getSectionById("hero")?.title}
+								Brianne Crews
 							</Typography>
 							<Typography variant="h4" style={headerStyle}>
-								{
-									(getSectionById("hero")?.content[0] as Types.HeroContent)
-										.subtitle
-								}
+								2022 Pharm.D./MBA Candidate
 							</Typography>
-							<Grid
-								container
-								justifyContent="center"
-								style={{ gap: "10px" }}
-							>
+							<Grid container justifyContent="center" style={{ gap: "10px" }}>
 								<Grid item>
 									<Button
 										size="large"
@@ -57,13 +67,7 @@ function App() {
 						</>
 					</Grid>
 					<Grid item xs="auto">
-						<img
-							src={
-								(getSectionById("hero")?.content[0] as Types.HeroContent).image
-							}
-							alt="brianne"
-							height="600px"
-						/>
+						<img src="res/hero.png" alt="brianne" height="600px" />
 					</Grid>
 				</Grid>
 			</Box>
@@ -74,33 +78,31 @@ function App() {
 					style={{ height: "100%" }}
 					justifyContent="center"
 				>
-					{(getSectionById("leadership")?.content as Types.PanelContent[]).map(
-						(content) => (
-							<Grid item key={content.title}>
-								<Card
-									style={{
-										height: "300px",
-										textAlign: "center",
-										padding: "24px",
-										width: "300px",
-									}}
-								>
-									<img
-										src={content.image}
-										alt={content.title}
-										height="100"
-										style={{ borderRadius: "100%" }}
-									/>
-									<Typography variant="h5" style={headerStyle}>
-										{content.title}
-									</Typography>
-									<Typography>
-										{content.description}
-									</Typography>
-								</Card>
-							</Grid>
-						)
-					)}
+					{[
+						{ title: "yes", image: "res/cpfi-logo.png", description: "yes" },
+					].map((content) => (
+						<Grid item key={content.title}>
+							<Card
+								style={{
+									height: "300px",
+									textAlign: "center",
+									padding: "24px",
+									width: "300px",
+								}}
+							>
+								<img
+									src={content.image}
+									alt={content.title}
+									height="100"
+									style={{ borderRadius: "100%" }}
+								/>
+								<Typography variant="h5" style={headerStyle}>
+									{content.title}
+								</Typography>
+								<Typography>{content.description}</Typography>
+							</Card>
+						</Grid>
+					))}
 				</Grid>
 			</Box>
 		</Box>
