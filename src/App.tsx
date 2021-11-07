@@ -1,11 +1,13 @@
-import * as Material from "@material-ui/core";
 import * as Icon from "@material-ui/icons";
-import { useMediaQuery } from "@material-ui/core";
+import { Button, Card, Grid, Typography, useMediaQuery } from "@material-ui/core";
 import data from "./Data.json";
 import * as Types from "./Types";
+import { Box } from "@mui/system";
 
 function App() {
 	const desktop = useMediaQuery("(min-width: 960px)");
+	const mobile = useMediaQuery("(max-width: 600px)");
+	const tablet = useMediaQuery("(min-width: 601px) and (max-width: 959px)");
 
 	const headerStyle: React.CSSProperties = {
 		fontFamily: "Merriweather",
@@ -17,44 +19,44 @@ function App() {
 		data.body.sections.find((section) => section.id === id);
 
 	return (
-		<Material.Box>
-			<Material.Box height="600px">
-				<Material.Grid container alignItems="center" style={{ height: "100%" }}>
-					<Material.Grid item xs style={{ textAlign: "center" }}>
+		<Box>
+			<Box height="600px">
+				<Grid container alignItems="center" style={{ height: "100%" }}>
+					<Grid item xs style={{ textAlign: "center" }}>
 						<>
-							<Material.Typography variant="h1" style={headerStyle}>
+							<Typography variant="h1" style={headerStyle}>
 								{getSectionById("hero")?.title}
-							</Material.Typography>
-							<Material.Typography variant="h4" style={headerStyle}>
+							</Typography>
+							<Typography variant="h4" style={headerStyle}>
 								{
 									(getSectionById("hero")?.content[0] as Types.HeroContent)
 										.subtitle
 								}
-							</Material.Typography>
-							<Material.Grid
+							</Typography>
+							<Grid
 								container
 								justifyContent="center"
 								style={{ gap: "10px" }}
 							>
-								<Material.Grid item>
-									<Material.Button
+								<Grid item>
+									<Button
 										size="large"
 										variant="contained"
 										disableElevation
 										color="primary"
 									>
 										About Me
-									</Material.Button>
-								</Material.Grid>
-								<Material.Grid item>
-									<Material.Button size="large" variant="outlined">
+									</Button>
+								</Grid>
+								<Grid item>
+									<Button size="large" variant="outlined">
 										Contact
-									</Material.Button>
-								</Material.Grid>
-							</Material.Grid>
+									</Button>
+								</Grid>
+							</Grid>
 						</>
-					</Material.Grid>
-					<Material.Grid item xs="auto">
+					</Grid>
+					<Grid item xs="auto">
 						<img
 							src={
 								(getSectionById("hero")?.content[0] as Types.HeroContent).image
@@ -62,11 +64,11 @@ function App() {
 							alt="brianne"
 							height="600px"
 						/>
-					</Material.Grid>
-				</Material.Grid>
-			</Material.Box>
-			<Material.Box style={{ backgroundColor: "#005588", padding: "24px" }}>
-				<Material.Grid
+					</Grid>
+				</Grid>
+			</Box>
+			<Box style={{ backgroundColor: "#005588", padding: "24px" }}>
+				<Grid
 					container
 					spacing={3}
 					style={{ height: "100%" }}
@@ -74,8 +76,8 @@ function App() {
 				>
 					{(getSectionById("leadership")?.content as Types.PanelContent[]).map(
 						(content) => (
-							<Material.Grid item>
-								<Material.Card
+							<Grid item key={content.title}>
+								<Card
 									style={{
 										height: "300px",
 										textAlign: "center",
@@ -85,22 +87,23 @@ function App() {
 								>
 									<img
 										src={content.image}
+										alt={content.title}
 										height="100"
 										style={{ borderRadius: "100%" }}
 									/>
-									<Material.Typography variant="h5" style={headerStyle}>
+									<Typography variant="h5" style={headerStyle}>
 										{content.title}
-									</Material.Typography>
-									<Material.Typography>
+									</Typography>
+									<Typography>
 										{content.description}
-									</Material.Typography>
-								</Material.Card>
-							</Material.Grid>
+									</Typography>
+								</Card>
+							</Grid>
 						)
 					)}
-				</Material.Grid>
-			</Material.Box>
-		</Material.Box>
+				</Grid>
+			</Box>
+		</Box>
 	);
 }
 
