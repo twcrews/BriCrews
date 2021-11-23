@@ -4,6 +4,7 @@ import {
 	Container,
 	Grid,
 	Icon,
+	TextField,
 	Tooltip,
 	Typography,
 	useMediaQuery,
@@ -24,8 +25,29 @@ import {
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import React from "react";
+import { CheckCircle } from "@mui/icons-material";
 
 function App() {
+	const [name, setName] = React.useState<string>("");
+	const [email, setEmail] = React.useState<string>("");
+	const [message, setMessage] = React.useState<string>("");
+	const [submitAttempted, setSubmitAttempted] = React.useState<boolean>(false);
+	const [submitted, setSubmitted] = React.useState<boolean>(false);
+
+	const emailValid =
+		/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) && email.length <= 255;
+	const nameValid = name.length > 0 && name.length <= 50;
+	const messageValid = message.length > 0 && message.length <= 1000;
+
+	const handleSubmit = () => {
+		setSubmitAttempted(true);
+		if (emailValid && nameValid && messageValid) {
+			setSubmitted(true);
+			// submit logic
+		}
+	};
+
 	const desktop = useMediaQuery("(min-width: 960px)");
 	const mobile = useMediaQuery("(max-width: 600px)");
 	const tablet = useMediaQuery("(min-width: 601px) and (max-width: 959px)");
@@ -84,7 +106,11 @@ function App() {
 										<Grid item>
 											<Tooltip title="Coming soon!">
 												<div>
-													<Button size="large" variant="outlined" disabled>
+													<Button
+														size="large"
+														variant="outlined"
+														href="#contact"
+													>
 														Contact
 													</Button>
 												</div>
@@ -329,7 +355,7 @@ function App() {
 						<Typography variant="h3" paragraph>
 							Academic Honors
 						</Typography>
-						<Grid container spacing={2}>
+						<Grid container spacing={2} justifyContent="center">
 							{Honors.map((content) => (
 								<Grid
 									item
@@ -381,6 +407,96 @@ function App() {
 								</Grid>
 							))}
 						</Grid>
+					</Box>
+					<Box sx={{ backgroundColor: "white" }}>
+						<Box
+							sx={{
+								textAlign: "center",
+								padding: "24px",
+								maxWidth: "540px",
+								margin: "0 auto",
+							}}
+						>
+							<Typography id="contact" variant="h2" paragraph>
+								Contact
+							</Typography>
+							<Typography paragraph>
+								Send me a message below and I'll get back to you as soon as
+								possible!
+							</Typography>
+							<Grid container spacing={2} justifyContent="center">
+								<Grid item xs={12} sm={6}>
+									<TextField
+										id="name-field"
+										type="text"
+										label="Name"
+										required
+										fullWidth
+										value={name}
+										onChange={(e) => setName(e.target.value.substring(0, 50))}
+										error={!nameValid && submitAttempted}
+										disabled={submitted}
+									/>
+								</Grid>
+								<Grid item xs={12} sm={6}>
+									<TextField
+										id="email-field"
+										type="email"
+										label="Email"
+										required
+										fullWidth
+										value={email}
+										onChange={(e) => setEmail(e.target.value.substring(0, 255))}
+										error={!emailValid && submitAttempted}
+										disabled={submitted}
+									/>
+								</Grid>
+								<Grid item xs={12}>
+									<TextField
+										id="message-field"
+										type="text"
+										label="Message"
+										required
+										fullWidth
+										multiline
+										rows={8}
+										helperText={`${(
+											1000 - message.length
+										).toLocaleString()} characters remaining`}
+										value={message}
+										onChange={(e) => setMessage(e.target.value)}
+										error={!messageValid && submitAttempted}
+										disabled={submitted}
+									/>
+								</Grid>
+								<Grid item xs="auto">
+									{submitted ? (
+										<Grid
+											container
+											alignItems="center"
+											justifyContent="center"
+											spacing={1}
+										>
+											<Grid item xs="auto">
+												<CheckCircle color="success" />
+											</Grid>
+											<Grid item xs>
+												<Typography> Message sent</Typography>
+											</Grid>
+										</Grid>
+									) : (
+										<Button
+											variant="contained"
+											disableElevation
+											color="primary"
+											onClick={handleSubmit}
+										>
+											Send Message
+										</Button>
+									)}
+								</Grid>
+							</Grid>
+						</Box>
 					</Box>
 				</Box>
 				<footer
