@@ -1,3 +1,85 @@
+export const Leadership = [
+	{
+		title: "NCPA SLC Secretary",
+		description:
+			"The NCPA Student Leadership Council is a national panel of students serving two-year terms. Only eight students are selected nationwide each year, and only four members hold elected positions.",
+		image: "./res/ncpa-logo.png",
+	},
+	{
+		title: "PLS President",
+		description:
+			"The Pharmacy Leadership Society is a national honors organization aimed at promoting leadership among pharmacy students.",
+		image: "./res/pls-logo.png",
+	},
+	{
+		title: "OSHP Secretary and Fundraising Chair",
+		description:
+			"A division of the American Society of Health-system Pharmacists, the OSHP supports those practicing in health systems from hospitals to private clinics.",
+		image: "./res/oshp-logo.png",
+	},
+	{
+		title: "SWOSU NCPA President",
+		description:
+			"NCPA's local chapters allow pharmacy students everywhere to engage with the organization at the university level.",
+		image: "./res/swosu-logo.png",
+	},
+	{
+		title: "SWOSU APhA Secretary",
+		description:
+			'The American Pharmacists Association serves as the "umbrella" organization for pharmacists nationwide. Local university chapters allow for student engagement.',
+		image: "./res/apha-logo.png",
+	},
+	{
+		title: "Dean's Council Representative",
+		description:
+			"The SWOSU Dean's Council of Students is a unique organization that allows student delegates to share in conversations and decision making at the administrative level.",
+		image: "./res/cop-logo.png",
+	},
+];
+
+export const About = {
+	title: "Pharmacy Professional",
+	description:
+		"I have spent the past several years honing my skills for a career of true service.\nFrom patient counseling to point of care testing, I specialize in providing top-quality care.",
+};
+
+export const Volunteer = [
+	{
+		title: "COVID-19 Vaccinations",
+		description: "Clinic Volunteer, Weatherford, OK",
+	},
+	{
+		title: "TB Testing",
+		description: "Clinic Volunteer, Weatherford, OK",
+	},
+	{
+		title: "Immunization Certification",
+		description: "Teaching Volunteer, Weatherford, OK",
+	},
+	{
+		title: "SWOSU Pre-pharmacy",
+		description: "Student Panel Volunteer, Weatherford, OK",
+	},
+	{
+		title: "PharmCorp",
+		description: "Volunteer, Weatherford, OK",
+	},
+	{
+		title: "Influenza Vaccinations",
+		description: "SWOSU and AGAPE volunteer, Weatherford, OK",
+	},
+];
+
+export const Certifications = [
+	"Community Pharmacy-Based Point-of Care Testing Certification",
+	"Mental Health First Aid Certification",
+	"APhA Pharmacy-Based Immunization Delivery Certification",
+	"American Heart Association Basic Life Support for Providers",
+	"Narcan Administration Certification",
+	"Certified Blood Pressure Screener",
+	"Oklahoma Pharmacy Intern License No. I-10067",
+];
+
 export const Data = {
 	owner: "Brianne Crews",
 	title: "2022 Pharm.D./MBA Candidate",
@@ -32,50 +114,7 @@ export const Data = {
 			id: "leadership",
 			type: "panel",
 			title: "Leadership",
-			content: [
-				{
-					title: "NCPA SLC Secretary",
-					description:
-						"The NCPA Student Leadership Council is a national panel of students serving two-year terms. Only eight students are selected nationwide each year, and only four members hold elected positions.",
-					image: "./res/ncpa-logo.png",
-				},
-				{
-					title: "PLS President",
-					description:
-						"The Pharmacy Leadership Society is a national honors organization aimed at promoting leadership among pharmacy students.",
-					image: "./res/pls-logo.png",
-				},
-				{
-					title: "OSHP Secretary and Fundraising Chair",
-					description:
-						"A division of the American Society of Health-system Pharmacists, the OSHP supports those practicing in health systems from hospitals to private clinics.",
-					image: "./res/oshp-logo.png",
-				},
-				{
-					title: "SWOSU NCPA President",
-					description:
-						"NCPA's local chapters allow pharmacy students everywhere to engage with the organization at the university level.",
-					image: "./res/swosu-logo.png",
-				},
-				{
-					title: "SWOSU APhA Secretary",
-					description:
-						'The American Pharmacists Association serves as the "umbrella" organization for pharmacists nationwide. Local university chapters allow for student engagement.',
-					image: "./res/apha-logo.png",
-				},
-				{
-					title: "CPFI Legislative Committee",
-					description:
-						"Similar to the FCA, Christian Pharmacists Fellowship International is an organization geared toward building community among believers in the pharmacy world.",
-					image: "./res/cpfi-logo.png",
-				},
-				{
-					title: "Dean's Council Representative",
-					description:
-						"The SWOSU Dean's Council of Students is a unique organization that allows student delegates to share in conversations and decision making at the administrative level.",
-					image: "./res/cop-logo.png",
-				},
-			],
+			content: [],
 		},
 		{
 			id: "contact",
