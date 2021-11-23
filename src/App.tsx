@@ -5,7 +5,6 @@ import {
 	Grid,
 	Icon,
 	TextField,
-	Tooltip,
 	Typography,
 	useMediaQuery,
 } from "@mui/material";
@@ -104,17 +103,9 @@ function App() {
 											</Button>
 										</Grid>
 										<Grid item>
-											<Tooltip title="Coming soon!">
-												<div>
-													<Button
-														size="large"
-														variant="outlined"
-														href="#contact"
-													>
-														Contact
-													</Button>
-												</div>
-											</Tooltip>
+											<Button size="large" variant="outlined" href="#contact">
+												Contact
+											</Button>
 										</Grid>
 									</Grid>
 								</>
