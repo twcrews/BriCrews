@@ -3,6 +3,7 @@ import {
 	Card,
 	Container,
 	Grid,
+	Icon,
 	Tooltip,
 	Typography,
 	useMediaQuery,
@@ -13,7 +14,13 @@ import {
 	createTheme,
 	responsiveFontSizes,
 } from "@mui/material/styles";
-import { Leadership, About, Volunteer, Certifications } from "./Content";
+import {
+	Leadership,
+	About,
+	Volunteer,
+	Certifications,
+	Honors,
+} from "./Content";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
@@ -220,91 +227,161 @@ function App() {
 							</Typography>
 						</Container>
 					</Box>
-					<Grid container spacing={{ xs: 0, xl: 2 }}>
-						<Grid item xs={12} xl={6}>
-							<Box
-								sx={{
-									backgroundColor: "#ccc",
-								}}
-							>
-								<Grid container direction={{ xs: "row", sm: "row-reverse" }}>
-									<Grid item xs={12} sm={6}>
-										<Container sx={{ padding: `16px ${mobile ? "8px" : "0"}` }}>
-											<Typography variant="h4" paragraph>
-												Giving Back
-											</Typography>
-											<Typography paragraph>
-												I've been blessed with the opportunity to volunteer my
-												time and talents in my community.
-											</Typography>
-											{Volunteer.map((content) => (
-												<div key={content.title}>
-													<Typography variant="h6">{content.title}</Typography>
-													<Typography variant="body2" paragraph>
+					<Box>
+						<Grid container spacing={{ xs: 0, xl: 2 }}>
+							<Grid item xs={12} xl={6}>
+								<Box
+									sx={{
+										backgroundColor: "#ccc",
+									}}
+								>
+									<Grid container direction={{ xs: "row", sm: "row-reverse" }}>
+										<Grid item xs={12} sm={6}>
+											<Container
+												sx={{ padding: `16px ${mobile ? "8px" : "0"}` }}
+											>
+												<Typography variant="h4" paragraph>
+													Giving Back
+												</Typography>
+												<Typography paragraph>
+													I've been blessed with the opportunity to volunteer my
+													time and talents in my community.
+												</Typography>
+												{Volunteer.map((content) => (
+													<div key={content.title}>
+														<Typography variant="h6">
+															{content.title}
+														</Typography>
+														<Typography variant="body2" paragraph>
+															{content.description}
+														</Typography>
+													</div>
+												))}
+											</Container>
+										</Grid>
+										<Grid item xs={12} sm={6}>
+											<img
+												style={{
+													height: "100%",
+													width: "100%",
+													marginBottom: "-4px",
+													objectFit: "cover",
+												}}
+												src="res/covid-clinic.jpg"
+												alt="covid clinic"
+											/>
+										</Grid>
+									</Grid>
+								</Box>
+							</Grid>
+							<Grid item xs={12} xl={6}>
+								<Box
+									sx={{
+										backgroundColor: "#1b365d",
+										color: "rgba(255, 255, 255, 0.8)",
+									}}
+								>
+									<Grid container>
+										<Grid item xs={12} sm={6}>
+											<Container
+												sx={{ padding: `16px ${mobile ? "8px" : "0"}` }}
+											>
+												<Typography variant="h4" paragraph>
+													Certifications
+												</Typography>
+												{Certifications.map((content) => (
+													<Grid container key={content} spacing={2}>
+														<Grid item xs="auto">
+															<Typography variant="h6">•</Typography>
+														</Grid>
+														<Grid item xs>
+															<Typography variant="h6" paragraph>
+																{content}
+															</Typography>
+														</Grid>
+													</Grid>
+												))}
+											</Container>
+										</Grid>
+										<Grid item xs={12} sm={6}>
+											<img
+												style={{
+													height: "100%",
+													width: "100%",
+													marginBottom: "-4px",
+													objectFit: "cover",
+												}}
+												src="res/hazmat.jpg"
+												alt="covid clinic"
+											/>
+										</Grid>
+									</Grid>
+								</Box>
+							</Grid>
+						</Grid>
+					</Box>
+					<Box
+						sx={{
+							textAlign: "center",
+							padding: "24px",
+						}}
+					>
+						<Typography variant="h3" paragraph>
+							Academic Honors
+						</Typography>
+						<Grid container spacing={2}>
+							{Honors.map((content) => (
+								<Grid
+									item
+									xs={12}
+									sm={6}
+									md={4}
+									lg={3}
+									xl={2}
+									key={content.description}
+									sx={{ color: content.color }}
+								>
+									<Card
+										square
+										sx={{
+											height: "200px",
+											color: content.color,
+											borderBottom: `5px solid ${content.color}`,
+										}}
+									>
+										<Box
+											sx={{
+												padding: "24px",
+												height: "100%",
+												boxSizing: "border-box",
+											}}
+										>
+											<Grid
+												container
+												direction="column"
+												spacing={0}
+												sx={{ height: "100%" }}
+											>
+												<Grid item xs>
+													<Icon fontSize="large" color="inherit">
+														{content.icon}
+													</Icon>
+													<Typography color="WindowText">
 														{content.description}
 													</Typography>
-												</div>
-											))}
-										</Container>
-									</Grid>
-									<Grid item xs={12} sm={6}>
-										<img
-											style={{
-												height: "100%",
-												width: "100%",
-												marginBottom: "-4px",
-												objectFit: "cover",
-											}}
-											src="res/covid-clinic.jpg"
-											alt="covid clinic"
-										/>
-									</Grid>
-								</Grid>
-							</Box>
-						</Grid>
-						<Grid item xs={12} xl={6}>
-							<Box
-								sx={{
-									backgroundColor: "#1b365d",
-									color: "rgba(255, 255, 255, 0.8)",
-								}}
-							>
-								<Grid container>
-									<Grid item xs={12} sm={6}>
-										<Container sx={{ padding: `16px ${mobile ? "8px" : "0"}` }}>
-											<Typography variant="h4" paragraph>
-												Certifications
-											</Typography>
-											{Certifications.map((content) => (
-												<Grid container key={content} spacing={2}>
-													<Grid item xs="auto">
-														<Typography variant="h6">•</Typography>
-													</Grid>
-													<Grid item xs>
-														<Typography variant="h6" paragraph>
-															{content}
-														</Typography>
-													</Grid>
 												</Grid>
-											))}
-										</Container>
-									</Grid>
-									<Grid item xs={12} sm={6}>
-										<img
-											style={{
-												height: "100%",
-												width: "100%",
-												marginBottom: "-4px",
-												objectFit: "cover",
-											}}
-											src="res/hazmat.jpg"
-											alt="covid clinic"
-										/>
-									</Grid>
+												<Grid item xs="auto">
+													<Typography variant="h4" variantMapping={{ h4: "p" }}>
+														{content.year}
+													</Typography>
+												</Grid>
+											</Grid>
+										</Box>
+									</Card>
 								</Grid>
-							</Box>
+							))}
 						</Grid>
-					</Grid>
+					</Box>
 				</Box>
 				<footer
 					style={{

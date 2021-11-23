@@ -80,6 +80,69 @@ export const Certifications = [
 	"Oklahoma Pharmacy Intern License No. I-10067",
 ];
 
+export const Honors = [
+	{
+		icon: "school",
+		color: "#133ea1",
+		description: "NCPA Foundation Presidential Scholarship",
+		year: "2021",
+	},
+	{
+		icon: "school",
+		color: "#133ea1",
+		description: "Cardinal Health Scholarship",
+		year: "2021",
+	},
+	{
+		icon: "school",
+		color: "#133ea1",
+		description: "NCPA Foundation Partners in Pharmacy Scholarship",
+		year: "2020",
+	},
+	{
+		icon: "school",
+		color: "#133ea1",
+		description: "Walter L. Dickinson Memorial Scholarship",
+		year: "2020",
+	},
+	{
+		icon: "school",
+		color: "#133ea1",
+		description: "Dr. ElGenia French Memorial Scholarship",
+		year: "2019",
+	},
+	{
+		icon: "star",
+		color: "#8c32d1",
+		description: "SWOSU College of Pharmacy Leader of the Month",
+		year: "2021",
+	},
+	{
+		icon: "star",
+		color: "#8c32d1",
+		description: "Phi Lambda Sigma Outstanding Member of the Semester",
+		year: "2020",
+	},
+	{
+		icon: "emoji_events",
+		color: "#d19932",
+		description: "Local Patient Counseling Competition Winner",
+		year: "2021",
+	},
+	{
+		icon: "check_box",
+		color: "#d19932",
+		description: "Selection for NCPA Advanced Pharmacy Practice Experience",
+		year: "2021",
+	},
+	{
+		icon: "check_box",
+		color: "#d19932",
+		description: "Selection to the Pharmacy Ownership and Leadership Academy",
+		year: "2020",
+	},
+];
+
 export const Data = {
 	owner: "Brianne Crews",
 	title: "2022 Pharm.D./MBA Candidate",
