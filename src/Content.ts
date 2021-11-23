@@ -131,13 +131,13 @@ export const Honors = [
 	},
 	{
 		icon: "check_box",
-		color: "#d19932",
+		color: "#008705",
 		description: "Selection for NCPA Advanced Pharmacy Practice Experience",
 		year: "2021",
 	},
 	{
 		icon: "check_box",
-		color: "#d19932",
+		color: "#008705",
 		description: "Selection to the Pharmacy Ownership and Leadership Academy",
 		year: "2020",
 	},
