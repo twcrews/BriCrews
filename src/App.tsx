@@ -26,6 +26,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import React from "react";
 import { CheckCircle } from "@mui/icons-material";
+import { LeadershipCard } from "./components/LeadershipCard";
 
 function App() {
 	const [name, setName] = React.useState<string>("");
@@ -189,7 +190,9 @@ function App() {
 											boxSizing: "border-box",
 										}}
 									>
-										<Card
+										<LeadershipCard
+											title={content.title}
+											image={content.image}
 											square={mobile}
 											elevation={mobile ? 0 : undefined}
 											variant={mobile ? "outlined" : undefined}
@@ -201,28 +204,8 @@ function App() {
 												marginBottom: mobile ? "-4px" : undefined,
 											}}
 										>
-											<Grid container gap={2}>
-												<Grid item xs={12}>
-													<div
-														style={{
-															backgroundImage: `url(${content.image})`,
-															backgroundSize: "cover",
-															height: "100px",
-															width: "100px",
-															backgroundRepeat: "no-repeat",
-															borderRadius: "100%",
-															margin: "0 auto",
-														}}
-													/>
-												</Grid>
-												<Grid item xs={12}>
-													<Typography variant="h5">{content.title}</Typography>
-												</Grid>
-												<Grid item xs={12}>
-													<Typography>{content.description}</Typography>
-												</Grid>
-											</Grid>
-										</Card>
+											{content.description}
+										</LeadershipCard>
 									</Box>
 								))}
 							</Slider>
